@@ -1,11 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
 
-    if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    }
+  hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+    
+    
+  });
+   navLinks.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    
+  });
+
 });
+
 
